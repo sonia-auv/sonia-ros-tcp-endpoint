@@ -8,8 +8,7 @@
             "name": "ROS: Launch",
             "type": "ros",
             "request": "launch",
-            "preLaunchTask": "build",
-            "target": "/home/sonia/ros_sonia_ws/src/<ENTER_YOUR_NODE_NAME>/launch/<ENTER_YOUR_NODE_NAME>.launch",
+            "target": "/home/sonia/ros_sonia_ws/src/sonia-ros-tcp-endpoint/launch/sonia-ros-tcp-endpoint.launch",
         }
     ]
 }

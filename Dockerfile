@@ -7,7 +7,7 @@ USER root
 ARG BUILD_DATE
 ARG VERSION
 
-ENV NODE_NAME=<ENTER_YOUR_NODE_NAME>
+ENV NODE_NAME=sonia-ros-tcp-endpoint
 
 LABEL net.etsmtl.sonia-auv.node.build-date=${BUILD_DATE}
 LABEL net.etsmtl.sonia-auv.node.version=${VERSION}
@@ -25,6 +25,9 @@ ENV LAUNCH_ABSPATH=${NODE_PATH}/launch/${LAUNCH_FILE}
 ENV ENTRYPOINT_ABSPATH=${NODE_PATH}/scripts/${ENTRYPOINT_FILE}
 
 ENV SONIA_WS_SETUP=${SONIA_WS}/devel/setup.bash
+
+WORKDIR ${SONIA_WS}/src
+RUN bash -c "git clone https://github.com/Unity-Technologies/ROS-TCP-Endpoint.git"
 
 WORKDIR ${SONIA_WS}
 
