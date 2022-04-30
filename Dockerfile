@@ -28,7 +28,6 @@ ENV SONIA_WS_SETUP=${SONIA_WS}/devel/setup.bash
 
 WORKDIR ${SONIA_WS}/src
 RUN bash -c "git clone https://github.com/Unity-Technologies/ROS-TCP-Endpoint.git"
-RUN bash -c "rosparam set ROS_IP 0.0.0.0"
 
 WORKDIR ${SONIA_WS}
 
