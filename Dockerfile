@@ -34,6 +34,8 @@ WORKDIR ${SONIA_WS}
 COPY . ${NODE_PATH}
 RUN bash -c "source ${ROS_WS_SETUP}; source ${BASE_LIB_WS_SETUP}; catkin_make"
 
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
 RUN chown -R ${SONIA_USER}: ${SONIA_WS}
 USER ${SONIA_USER}
 
